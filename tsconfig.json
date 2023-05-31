@@ -21,8 +21,15 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["@src/*"],
+      "@assets/*": ["@assets/*"]
+    }
+  },
+  "ts-node": {
+    "files": true
   },
   "exclude": ["node_modules"],
-  "include": ["./src/**/*.ts"]
+  "include": ["./src/**/*.ts", "scripts/deploy-cmds.ts"]
 }
