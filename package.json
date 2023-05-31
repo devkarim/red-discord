@@ -1,0 +1,23 @@
+{
+  "name": "red",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./build && tsc",
+    "start": "npm run build && node build/app.js",
+    "dev": "npx nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@types/node": "^20.2.5",
+    "discord.js": "^14.11.0"
+  }
+}
