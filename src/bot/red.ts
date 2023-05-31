@@ -38,7 +38,7 @@ const registerEvents = () => {
       const [categoryId, payload] = interaction.customId.split('.');
       const btn = interaction.client.buttons.get(categoryId);
       if (!btn) {
-        dbgErr(`No command matching ${categoryId} was found.`);
+        dbgErr(`No button matching ${categoryId} was found.`);
         return;
       }
       try {
