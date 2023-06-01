@@ -9,7 +9,7 @@ declare global {
       DISCORD_CLIENT_SECRET: string;
       DISCORD_TOKEN: string;
       DISCORD_DEV_GUILD_ID: string;
-      ENV: 'development' | 'production';
+      NODE_ENV: 'development' | 'production';
     }
   }
 }
