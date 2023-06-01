@@ -1,5 +1,7 @@
 # RED Discord Bot
 
+<p align="center"><img src="https://imgur.com/TNWYtZW.png" width="150" height="150" align="center"/></p>
+
 ## Overview
 
 RED is a very narcissist discord bot that only obeys his founders and automates a few important daily tasks. The bot is listed private only to his founder (me 😀) for now meaning you can't invite it to your server yet.
