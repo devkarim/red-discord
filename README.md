@@ -2,7 +2,7 @@
 
 ## Overview
 
-RED is a very narcissist discord bot that only obeys only his founders and automates a few important daily tasks. The bot is listed private only to his founder (me 😀) for now meaning you can't invite it to your server yet.
+RED is a very narcissist discord bot that only obeys his founders and automates a few important daily tasks. The bot is listed private only to his founder (me 😀) for now meaning you can't invite it to your server yet.
 
 ## Features
 
