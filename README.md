@@ -46,7 +46,8 @@ This project includes a few useful scripts that may help you with development:
 
 ## Authors
 
-RED is founded and created by [@devkarim](https://github.com/devkarim) ❤️
+- Founded and created by [@devkarim](https://github.com/devkarim) ❤️
+- RED pfp is designed by [@XJustMO](https://github.com/XJustMO) ❤️
 
 # License
 
