@@ -1,8 +1,8 @@
 {
   "name": "red",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "RED is a discord bot automating a few daily tasks.",
+  "main": "src/app.ts",
   "scripts": {
     "build": "rm -rf ./build && tsc",
     "start": "npm run build && node build/app.js",
@@ -10,9 +10,12 @@
     "deploy-cmds": "ts-node scripts/deploy-cmds.ts",
     "dev": "ts-node src/app.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "devkarim",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^8.41.0",
     "nodemon": "^2.0.22",
