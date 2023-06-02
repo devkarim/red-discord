@@ -7,7 +7,7 @@ const prayerButton: ButtonAction = {
     const msg = await interaction.deferReply({ ephemeral: true });
     const timings = await getPrayerTimesByCity(city);
     await interaction.editReply({
-      content: `Welcome to RED!\n\nPrayer Times in ${city} is:\n\n${parseReadableTimings(
+      content: `Welcome to RED!\n\nPrayer times in ${city} is:\n\n${parseReadableTimings(
         timings
       )}`,
     });
