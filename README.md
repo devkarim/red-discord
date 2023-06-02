@@ -26,7 +26,7 @@ You can run this discord bot on your device but it requires a few environment va
 DISCORD_CLIENT_ID=<Your-Discord-Client-ID>
 DISCORD_TOKEN=<Your-Discord-Token>
 DISCORD_DEV_GUILD_ID=<Your-Discord-Development-Server-ID>
-ENV=<production/development>
+NODE_ENV=<production/development>
 ```
 
 Don't share these environment variables with anybody! Only share with me ❤️
