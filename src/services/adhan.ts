@@ -49,7 +49,7 @@ export const parseReadableTimings = (timings: PrayerTiming[]) => {
   let msg = '';
   for (const p of timings) {
     if (
-      ['fajr', 'dhuhr', 'asr', 'sunset', 'maghrib', 'isha'].includes(
+      ['fajr', 'dhuhr', 'asr', 'sunrise', 'maghrib', 'isha'].includes(
         p.prayer.toLowerCase()
       )
     ) {
