@@ -10,6 +10,7 @@ import ALL_SLASH_COMMANDS from '../commands';
 import { dbgErr, dbg } from '../helpers/utils';
 import setupPrayers from './prayers';
 import ALL_BUTTON_ACTIONS from '../buttons';
+import { CURRENT_ACTIVITY } from '../config/constants';
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
@@ -29,6 +30,7 @@ const registerEvents = () => {
     dbg(`Logged in as: ${c.user.tag}`);
     dbg('Listening...');
     setupPrayers(client);
+    c.user.setActivity(CURRENT_ACTIVITY);
   });
 
   client.on(Events.InteractionCreate, async (interaction) => {
