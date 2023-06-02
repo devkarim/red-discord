@@ -1,4 +1,5 @@
 import {
+  ActivityType,
   ButtonInteraction,
   Client,
   Collection,
@@ -30,7 +31,7 @@ const registerEvents = () => {
     dbg(`Logged in as: ${c.user.tag}`);
     dbg('Listening...');
     setupPrayers(client);
-    c.user.setActivity(CURRENT_STATUS);
+    c.user.setActivity(CURRENT_STATUS, { type: ActivityType.Listening });
   });
 
   client.on(Events.InteractionCreate, async (interaction) => {
