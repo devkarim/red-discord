@@ -1,4 +1,5 @@
 import {
+  ActivityType,
   ButtonInteraction,
   Client,
   Collection,
@@ -10,7 +11,7 @@ import ALL_SLASH_COMMANDS from '../commands';
 import { dbgErr, dbg } from '../helpers/utils';
 import setupPrayers from './prayers';
 import ALL_BUTTON_ACTIONS from '../buttons';
-import { CURRENT_ACTIVITY } from '../config/constants';
+import { CURRENT_STATUS } from '../config/constants';
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
@@ -30,7 +31,7 @@ const registerEvents = () => {
     dbg(`Logged in as: ${c.user.tag}`);
     dbg('Listening...');
     setupPrayers(client);
-    c.user.setActivity(CURRENT_ACTIVITY);
+    c.user.setActivity(CURRENT_STATUS, { type: ActivityType.Streaming });
   });
 
   client.on(Events.InteractionCreate, async (interaction) => {
