@@ -6,7 +6,9 @@
 
 RED is a very narcissist discord bot that only obeys his founders and automates a few important daily tasks. The bot is listed private only to his founder (me 😀) for now meaning you can't invite it to your server yet.
 
-RED has a story behind it. Interactions with Red reveal easter eggs of what Red's story really is. Some easter eggs have a little chance to show up when you interact with Red while some other easter eggs are always revealed. Red's story is inspired by my thoughts and will be improved upon the way.
+## Story behind RED (WIP)
+
+RED has a story behind it. Interactions with RED reveal easter eggs of what RED's story really is. Some easter eggs have a little chance to show up when you interact with RED while some other easter eggs are always revealed. RED's story is inspired by my thoughts and will be improved upon the way.
 
 ## Features
 
