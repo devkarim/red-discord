@@ -23,8 +23,8 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@src/*": ["@src/*"],
-      "@assets/*": ["@assets/*"]
+      "@/*": ["src/*"],
+      "@assets/*": ["assets/*"]
     }
   },
   "ts-node": {

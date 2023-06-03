@@ -1,6 +1,6 @@
 import { SlashCommandBuilder } from 'discord.js';
 import { SlashCommand } from '../../types/discord';
-import { tr } from '../../helpers/utils';
+import { tr } from '@/helpers/utils';
 
 const helloCmd: SlashCommand = {
   command: new SlashCommandBuilder()
