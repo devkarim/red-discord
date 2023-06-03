@@ -6,8 +6,8 @@ export enum Locale {
 }
 
 interface LocaleStrings {
-  'en-US': { [key: string]: string };
-  'ar-EG': { [key: string]: string };
+  'en-US': { [key: string]: string | string[] };
+  'ar-EG': { [key: string]: string | string[] };
 }
 
 const texts: LocaleStrings = JSON.parse(

@@ -27,5 +27,5 @@ export const getRandomFromArgs = <T>(...arr: T[]) => {
 };
 
 export const tr = (...arr: string[]) => {
-  return t(Locale.EG, getRandomFromArgs(...arr));
+  return getRandomFromArgs(...t(Locale.EG, getRandomFromArgs(...arr)));
 };

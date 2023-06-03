@@ -8,7 +8,7 @@ const helloCmd: SlashCommand = {
     .setDescription('I wish I know who I am'),
   async execute(interaction) {
     await interaction.reply(tr('whoareyou.introduction'));
-    if (Math.random() > 0.95) {
+    if (Math.random() > 0.85) {
       await interaction.reply(
         tr('whoareyou.memory_is_blurry', 'whoareyou.wife')
       );
