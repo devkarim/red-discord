@@ -53,7 +53,9 @@ export const parseReadableTimings = (timings: PrayerTiming[]) => {
         p.prayer.toLowerCase()
       )
     ) {
-      msg += `Al-${p.prayer}: ${to12H(p.time)}\n`;
+      msg += `${p.prayer.toLowerCase() != 'sunrise' ? 'Al-' : ''}${
+        p.prayer
+      }: ${to12H(p.time)}\n`;
     }
   }
   return msg;
