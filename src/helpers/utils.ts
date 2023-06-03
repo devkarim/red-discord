@@ -26,6 +26,7 @@ export const getRandomFromArgs = <T>(...arr: T[]) => {
   return arr[Math.floor(Math.random() * arr.length)];
 };
 
-export const tr = (...arr: string[]) => {
-  return getRandomFromArgs(...t(Locale.EG, getRandomFromArgs(...arr)));
+export const tr = (...arr: string[]): string => {
+  const text = t(Locale.EG, getRandomFromArgs(...arr));
+  return Array.isArray(text) ? getRandomFromArgs(...text) : text;
 };
