@@ -1,10 +1,12 @@
 {
-  "ar-EG": {
-    "whoareyou.memory_is_blurry": "الدكتور قالي ان ذاكرتي مشوشة ف مش عارف",
-    "whoareyou.wife": "انا عايز مراتي"
-  },
   "en-US": {
-    "whoareyou.memory_is_blurry": "Doctor says my memory is blurry so I do not know",
+    "whoareyou.introduction": "I'm RED",
+    "whoareyou.memory_is_blurry": "Doctor says my memory is blurry",
     "whoareyou.wife": "I just want my wife back"
+  },
+  "ar-EG": {
+    "whoareyou.introduction": "انا الفاجر انا القادر",
+    "whoareyou.memory_is_blurry": "الدكتور قالي ان ذاكرتي مشوشة",
+    "whoareyou.wife": "انا عايز مراتي"
   }
 }
