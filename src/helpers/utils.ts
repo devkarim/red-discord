@@ -1,3 +1,5 @@
+import t, { Locale } from './i18n';
+
 export const getCurrentDateTime = () => {
   return new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
 };
@@ -18,4 +20,12 @@ export const to12H = (time: string) => {
   const hours = +time.split(':')[0];
   const minutes = time.split(':')[1];
   return `${hours > 12 ? hours - 12 : hours}:${minutes}`;
+};
+
+export const getRandomFromArgs = <T>(...arr: T[]) => {
+  return arr[Math.floor(Math.random() * arr.length)];
+};
+
+export const tr = (...arr: string[]) => {
+  return t(Locale.EG, getRandomFromArgs(...arr));
 };
