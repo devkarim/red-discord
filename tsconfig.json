@@ -22,10 +22,6 @@
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "@assets/*": ["assets/*"]
-    }
   },
   "ts-node": {
     "files": true
