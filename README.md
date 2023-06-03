@@ -6,11 +6,14 @@
 
 RED is a very narcissist discord bot that only obeys his founders and automates a few important daily tasks. The bot is listed private only to his founder (me 😀) for now meaning you can't invite it to your server yet.
 
+RED has a story behind it. Interactions with Red reveal easter eggs of what Red's story really is. Some easter eggs have a little chance to show up when you interact with Red while some other easter eggs are always revealed. Red's story is inspired by my thoughts and will be improved upon the way.
+
 ## Features
 
 RED has limited features for now. Features are:
 
 - Tells you islamic prayer times based on your city with interactive buttons. Supports 3 cities in Egypt: Cairo (my city ❤️), Mansoura (worst city 🤢) and Al-Ismailia (mango city 🥭).
+- Has easter eggs that reveal RED's story & his past.
 
 ## Dependencies
 
