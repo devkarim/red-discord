@@ -43,6 +43,7 @@ This project includes a few useful scripts that may help you with development:
 - **deploy-cmds:** Deploys slash commands to your discord development server id.
 - **watch:** Watches for changes inside "src" folder then restarts the discord bot accordingly.
 - **build:** Compiles the discord bot from TypeScript to JavaScript into "/build" folder.
+- **dev:** Starts main typescript file directly without compiling.
 
 ## Authors
 
