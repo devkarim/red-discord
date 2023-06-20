@@ -1,4 +1,4 @@
-import { SlashCommandBuilder } from 'discord.js';
+import { PermissionFlagsBits, SlashCommandBuilder } from 'discord.js';
 import { SlashCommand } from '../../types/discord';
 import {
   createGuildIfNotExist,
@@ -11,6 +11,7 @@ const configPrayerChannelCmd: SlashCommand = {
   category: 'admin',
   command: new SlashCommandBuilder()
     .setName('setprayerschannel')
+    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
     .setDescription('Set prayers channel to be this current channel.'),
   async execute(interaction) {
     await interaction.deferReply({ ephemeral: true });

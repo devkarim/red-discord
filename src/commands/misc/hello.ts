@@ -3,6 +3,7 @@ import { SlashCommand } from '../../types/discord';
 import { tr } from '../../helpers/utils';
 
 const helloCmd: SlashCommand = {
+  category: 'Misc',
   command: new SlashCommandBuilder()
     .setName('whoareyou')
     .setDescription('I wish I know who I am'),
