@@ -60,7 +60,7 @@ const initPrayersForGuild = async (client: Client, guildId: string) => {
 const setupPrayers = async (client: Client) => {
   const allGuilds = await getAllGuilds();
   for (const guild of allGuilds) {
-    initPrayersForGuild(client, guild.guildId);
+    initPrayersForGuild(client, guild.id);
   }
 };
 

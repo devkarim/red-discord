@@ -5,7 +5,7 @@
   "main": "src/app.ts",
   "scripts": {
     "build": "rm -rf ./build && tsc",
-    "start": "npm run build && node build/app.js",
+    "start": "npm run build && npx prisma migrate && node build/app.js",
     "watch": "npx nodemon",
     "deploy-cmds": "ts-node scripts/deploy-cmds.ts",
     "dev": "ts-node src/app.ts"

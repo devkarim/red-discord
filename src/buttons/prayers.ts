@@ -1,4 +1,5 @@
 import getPrayerTimesByCity, { parseReadableTimings } from '../services/adhan';
+import { setUserLocation } from '../services/db/user';
 import { ButtonAction } from '../types/discord';
 
 const prayerButton: ButtonAction = {
@@ -12,6 +13,7 @@ const prayerButton: ButtonAction = {
       )}`,
     });
     setTimeout(() => msg.delete(), 15000);
+    await setUserLocation(interaction.user.id, city, 'Egypt');
   },
 };
 

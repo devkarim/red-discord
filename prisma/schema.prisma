@@ -11,17 +11,18 @@ datasource db {
   shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
-model Server {
-  id               Int     @id @default(autoincrement())
-  guildId          String  @unique
+model Guild {
+  id_              Int     @id @default(autoincrement())
+  id               String  @unique
   prayersChannelId String? @unique
   prayersMessageId String? @unique
 }
 
 model User {
-  id         Int       @id @default(autoincrement())
+  id_        Int       @id @default(autoincrement())
+  id         String    @unique
   name       String?
-  Location   Location? @relation(fields: [locationId], references: [id])
+  location   Location? @relation(fields: [locationId], references: [id])
   locationId Int?
 }
 

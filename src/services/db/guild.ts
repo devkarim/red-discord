@@ -1,41 +1,41 @@
 import { prisma } from './prisma';
 
-export const createGuild = (guildId: string) => {
-  return prisma.server.create({ data: { guildId } });
+export const createGuild = (id: string) => {
+  return prisma.guild.create({ data: { id } });
 };
 
-export const getGuildById = (guildId: string) => {
-  return prisma.server.findFirst({ where: { guildId } });
+export const getGuildById = (id: string) => {
+  return prisma.guild.findFirst({ where: { id } });
 };
 
-export const createGuildIfNotExist = async (guildId: string) => {
-  const guild = await getGuildById(guildId);
+export const createGuildIfNotExist = async (id: string) => {
+  const guild = await getGuildById(id);
   if (!guild) {
-    await createGuild(guildId);
+    await createGuild(id);
   }
   return guild;
 };
 
 export const getAllGuilds = () => {
-  return prisma.server.findMany();
+  return prisma.guild.findMany();
 };
 
 export const setGuildPrayersChannelId = async (
-  guildId: string,
+  id: string,
   prayersChannelId: string
 ) => {
-  return prisma.server.update({
-    where: { guildId },
+  return prisma.guild.update({
+    where: { id },
     data: { prayersChannelId },
   });
 };
 
 export const setGuildPrayersMessageId = async (
-  guildId: string,
+  id: string,
   prayersMessageId: string
 ) => {
-  return prisma.server.update({
-    where: { guildId },
+  return prisma.guild.update({
+    where: { id },
     data: { prayersMessageId },
   });
 };
