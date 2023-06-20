@@ -44,7 +44,7 @@ const helpCmd: SlashCommand = {
         iconURL: 'https://imgur.com/TNWYtZW.png',
         url: 'https://github.com/devkarim/red-discord',
       })
-      .setDescription("Here you can experiement with RED's commands 💖")
+      .setDescription('Here you can experiement with my commands 💖')
       .setThumbnail('https://imgur.com/TNWYtZW.png')
       .addFields({ name: '\u200B', value: '\u200B' })
       .addFields(parseReadableCommands())
