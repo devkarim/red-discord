@@ -13,9 +13,9 @@ datasource db {
 
 model Server {
   id               Int     @id @default(autoincrement())
-  guildId          String
-  prayersChannelId String?
-  prayersMessageId String?
+  guildId          String  @unique
+  prayersChannelId String? @unique
+  prayersMessageId String? @unique
 }
 
 model User {

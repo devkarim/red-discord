@@ -13,6 +13,7 @@ export interface SlashCommand {
   execute: (interaction: CommandInteraction) => Promise<void>;
   autocomplete?: (interaction: AutocompleteInteraction) => void;
   cooldown?: number; // in seconds
+  category?: String;
 }
 
 export interface ButtonAction {

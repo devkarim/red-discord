@@ -3,9 +3,11 @@ import {
   ButtonBuilder,
   ButtonStyle,
   Client,
+  Message,
   MessageActionRowComponentBuilder,
+  TextBasedChannel,
 } from 'discord.js';
-import { PRAYERS_CHANNEL_ID, PRAYER_MESSAGE_ID } from '../config/constants';
+import { getAllGuilds, getGuildById } from '../services/db/guild';
 
 enum PrayerCity {
   MANSOURA = 'Mansoura',
@@ -15,31 +17,51 @@ enum PrayerCity {
 
 const PRAYER_CITIES = Object.values(PrayerCity);
 
-const setupPrayers = async (client: Client) => {
-  const channel = await client.channels.fetch(PRAYERS_CHANNEL_ID);
-  if (!channel || !channel.isTextBased()) return;
-  const message = await channel.messages
-    .fetch(PRAYER_MESSAGE_ID)
-    .then((m) => m)
-    .catch(async (_) => await channel.send('To be edited for prayers.'));
-  const buttons: ButtonBuilder[] = [];
-  for (const city of PRAYER_CITIES) {
-    buttons.push(
-      new ButtonBuilder()
-        .setCustomId('prayers.' + city)
-        .setLabel(city)
-        .setStyle(ButtonStyle.Primary)
-    );
-  }
-  const row =
-    new ActionRowBuilder<MessageActionRowComponentBuilder>().addComponents(
-      ...buttons
-    );
+const prayerBtns: ButtonBuilder[] = [];
+for (const city of PRAYER_CITIES) {
+  prayerBtns.push(
+    new ButtonBuilder()
+      .setCustomId('prayers.' + city)
+      .setLabel(city)
+      .setStyle(ButtonStyle.Primary)
+  );
+}
+const prayerRow =
+  new ActionRowBuilder<MessageActionRowComponentBuilder>().addComponents(
+    ...prayerBtns
+  );
 
-  await message.edit({
+export const makePrayersMessage = async (channel: TextBasedChannel) => {
+  return channel.send({
     content: `Choose your location to show your city's prayer times.`,
-    components: [row],
+    components: [prayerRow],
   });
+};
+
+export const addPrayersToMessage = async (message: Message) => {
+  return message.edit({
+    content: `Choose your location to show your city's prayer times.`,
+    components: [prayerRow],
+  });
+};
+
+const initPrayersForGuild = async (client: Client, guildId: string) => {
+  const guild = await getGuildById(guildId);
+  if (!guild) return;
+  const { prayersChannelId, prayersMessageId } = guild;
+  if (!prayersChannelId || !prayersMessageId) return;
+  const channel = await client.channels.fetch(prayersChannelId);
+  if (!channel || !channel.isTextBased()) return;
+  const message = await channel.messages.fetch(prayersMessageId);
+  if (!message) return;
+  addPrayersToMessage(message);
+};
+
+const setupPrayers = async (client: Client) => {
+  const allGuilds = await getAllGuilds();
+  for (const guild of allGuilds) {
+    initPrayersForGuild(client, guild.guildId);
+  }
 };
 
 export default setupPrayers;
