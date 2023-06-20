@@ -8,7 +8,7 @@ RED is a very narcissist discord bot that only obeys his founders and automates 
 
 ## Story behind RED (WIP)
 
-RED has a story behind it. Interactions with RED reveal easter eggs of what RED's story really is. Some easter eggs have a little chance to show up when you interact with RED while some other easter eggs are always revealed. RED's story is inspired by my thoughts and will be improved upon the way.
+RED has a story behind it. Interactions with RED reveal easter eggs of what RED's story really is. Some easter eggs have a little chance to show up when you interact with RED while some other easter eggs are always revealed. RED's story is inspired by my thoughts and will be improved on the way.
 
 ## Features
 
