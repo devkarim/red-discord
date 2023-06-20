@@ -16,22 +16,26 @@ RED has limited features for now. Features are:
 
 - Tells you islamic prayer times based on your city with interactive buttons. Supports 3 cities in Egypt: Cairo (my city ❤️), Mansoura (worst city 🤢) and Al-Ismailia (mango city 🥭).
 - Has easter eggs that reveal RED's story & his past.
+- PostgreSQL database support where it saves guild/server data as well as user's data.
 
 ## Dependencies
 
 - Node.js
 - Discord.js
+- Prisma ORM
 - Other utility dependencies
 
 ## How to Run (if you care)
 
-You can run this discord bot on your device but it requires a few environment variables to be considered in your .env file:
+This project requires to have PostgreSQL setup somewhere. You can run this discord bot on your device but it requires a few environment variables to be considered in your .env file:
 
 ```
 DISCORD_CLIENT_ID=<Your-Discord-Client-ID>
 DISCORD_TOKEN=<Your-Discord-Token>
 DISCORD_DEV_GUILD_ID=<Your-Discord-Development-Server-ID>
 NODE_ENV=<production/development>
+DATABASE_URL=<PostgreSQL-Database-URL>
+SHADOW_DATABASE_URL=<PostgreSQL-Shadow-Database-URL>
 ```
 
 Don't share these environment variables with anybody! Only share with me ❤️
