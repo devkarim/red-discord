@@ -4,8 +4,7 @@ import { RED_HEX_COLOR } from '../../config/constants';
 import ALL_SLASH_COMMANDS from '..';
 import { capatlize } from '../../helpers/utils';
 
-const parseReadableCommands = (): APIEmbedField[] => {
-  const readableCommands: APIEmbedField[] = [];
+const getCategoryCommands = () => {
   const categoryCommands: { [key: string]: SlashCommand[] } = {};
   for (const c of ALL_SLASH_COMMANDS) {
     const category: string = capatlize((c.category as string) || 'Other');
@@ -14,6 +13,12 @@ const parseReadableCommands = (): APIEmbedField[] => {
     }
     categoryCommands[category].push(c);
   }
+  return categoryCommands;
+};
+
+const parseReadableCommands = (): APIEmbedField[] => {
+  const readableCommands: APIEmbedField[] = [];
+  const categoryCommands = getCategoryCommands();
   for (const category in categoryCommands) {
     if (category.toLowerCase() == 'admin') continue;
     const cmds = categoryCommands[category];
